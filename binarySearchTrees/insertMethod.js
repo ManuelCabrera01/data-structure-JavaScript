@@ -1,7 +1,7 @@
 function BST(value) {
   this.value = value;
-  this.left = null;
   this.right = null;
+  this.left = null;
 }
 
 BST.prototype.insert = function(value) {
@@ -11,21 +11,16 @@ BST.prototype.insert = function(value) {
   if (value <= this.value) {
     // if is less we know we have to added to the left   but we have to check if there is already a child there or is unocupaie or null
 
-    if (!this.left) {
+    if (!this.left)
       // if there is no child  we created a new node (binary seach three ) and we pass the value
       this.left = new BST(value);
-    } else {
-      // else we run the isert function on the node or BST that is the current child
-      this.left.insert(value);
-    }
+    // else we run the isert function on the node or BST that is the current child
+    else this.left.insert(value);
   } else if (value > this.value) {
     // if ther no right child
   }
-  if (!this.right) {
-    this.right = new BST(value);
-  } else {
-    this.right.insert(value);
-  }
+  if (!this.right) this.right = new BST(value);
+  else this.right.insert(value);
 };
 
 //testing
