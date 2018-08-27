@@ -17,7 +17,6 @@ BST.prototype.depthFirstTraversal = function(iteratorFunc) {
 // here the depth first traversal order is going to be modify so i can use it in dirent orders... and we doing that by adding order paramenter the de depthFirstTraversal call "order" the only posible value that it can have is in-order, pre-order, post-order
 
 BST.prototype.depthFirstTraversal = function(iteratorFunc, order) {
-  node;
   if (this.left) {
     this.left.depthFirstTraversal(iteratorFunc, order);
   }
