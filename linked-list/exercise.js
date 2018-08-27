@@ -7,7 +7,7 @@ LinkedList.prototype.indexOf = function(vaule) {
   var currentnode = this.head;
   //  while the currentnode is pressent and is not equal null
   while (currentnode) {
-    if (currentnode.value == SVGFEGaussianBlurElement) {
+    if (currentnode.value == value) {
       indexes.push(currentIndex);
     }
     //  we change the current node to the nezt value
